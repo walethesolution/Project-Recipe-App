@@ -13,6 +13,12 @@ header {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
+img {
+  object-fit: scale-down;
+  width: 100%;
+  height: 100%;
+}
+
 /* typography */
 
 html {
@@ -26,7 +32,7 @@ tfoot th {
 
 h1 {
   font-size: 64px;
-  font: "Playfair Display SC";
+  font-family: "Playfair Display SC";
   text-align: center;
 }
 
@@ -62,5 +68,29 @@ table {
 }
 
 /* Column Size for thead */
+thead tr:nth-child(1),
+thead tr:nth-child(2),
+thead tr:nth-child(3) {
+  width: 10%;
+}
+
+thead tr:nth-child(4),
+thead tr:nth-child(5) {
+  width: 30%;
+}
 
 /* Column size for tbody */
+tbody tr:nth-child(odd) {
+  background-color: #fff0c7;
+}
+
+tbody:nth-child(1),
+tbody:nth-child(2),
+tbody:nth-child(3) {
+  width: 10%;
+}
+
+tbody:nth-child(4),
+tbody:nth-child(5) {
+  width: 30%;
+}

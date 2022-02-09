@@ -1,8 +1,8 @@
 import React from "react";
 
-function RecipeView({ recipe, deleteRecipe }) {
+function RecipeView({ recipe, index, deleteRecipe }) {
   return (
-    <tr>
+    <tr key={index}>
       <td>
         <p>{recipe.name}</p>
       </td>
@@ -10,7 +10,7 @@ function RecipeView({ recipe, deleteRecipe }) {
         <p>{recipe.cuisine}</p>
       </td>
       <td>
-        <p>{recipe.photo}</p>
+        <img src={recipe.photo} alt={recipe.photo} />
       </td>
       <td className="content_td">
         <p>{recipe.ingredients}</p>
@@ -18,9 +18,11 @@ function RecipeView({ recipe, deleteRecipe }) {
       <td className="content_td">
         <p>{recipe.preparation}</p>
       </td>
-      <button name="delete" onClick={deleteRecipe}>
-        Delete
-      </button>
+      <td>
+        <button name="delete" onClick={deleteRecipe}>
+          Delete
+        </button>
+      </td>
     </tr>
   );
 }

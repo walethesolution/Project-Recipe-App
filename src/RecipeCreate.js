@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function RecipeCreate() {
+function RecipeCreate({ createRecipe }) {
   const recipe = {
     name: "",
     cuisine: "",
@@ -18,7 +18,8 @@ function RecipeCreate() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    setFormData({ ...formData });
+    createRecipe(formData);
+    setFormData({ ...recipe });
   };
   // TODO: Add the required input and textarea form elements.
   // TODO: Add the required submit and change handlers
