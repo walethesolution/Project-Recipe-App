@@ -68,14 +68,15 @@ table {
 }
 
 /* Column Size for thead */
-thead tr:nth-child(1),
-thead tr:nth-child(2),
-thead tr:nth-child(3) {
+th:nth-child(1),
+th:nth-child(2),
+th:nth-child(3),
+th:nth-child(6) {
   width: 10%;
 }
 
-thead tr:nth-child(4),
-thead tr:nth-child(5) {
+th:nth-child(4),
+th:nth-child(5) {
   width: 30%;
 }
 
@@ -84,13 +85,14 @@ tbody tr:nth-child(odd) {
   background-color: #fff0c7;
 }
 
-tbody:nth-child(1),
-tbody:nth-child(2),
-tbody:nth-child(3) {
+td:nth-child(1),
+td:nth-child(2),
+td:nth-child(3),
+td:nth-child(6) {
   width: 10%;
 }
 
-tbody:nth-child(4),
-tbody:nth-child(5) {
+td:nth-child(4),
+td:nth-child(5) {
   width: 30%;
 }

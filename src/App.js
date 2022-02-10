@@ -8,7 +8,7 @@ import RecipeHeader from "./RecipeHeader";
 function App() {
   const [recipes, setRecipes] = useState(RecipeData);
 
-  const createRecipe = (newRecipe) => setRecipes([newRecipe, ...recipes]);
+  const createRecipe = (newRecipe) => setRecipes([...recipes, newRecipe]);
 
   const deleteRecipe = (indexToDelete) =>
     setRecipes((currentRecipes) =>
