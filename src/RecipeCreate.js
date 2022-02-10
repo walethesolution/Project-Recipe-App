@@ -10,7 +10,6 @@ function RecipeCreate({ createRecipe }) {
   };
 
   const [formData, setFormData] = useState({ ...recipe });
-  // TODO: When the form is submitted, a new recipe should be created, and the form contents cleared.
 
   const handleChange = ({ target }) => {
     setFormData({ ...formData, [target.name]: target.value });
@@ -21,8 +20,6 @@ function RecipeCreate({ createRecipe }) {
     createRecipe(formData);
     setFormData({ ...recipe });
   };
-  // TODO: Add the required input and textarea form elements.
-  // TODO: Add the required submit and change handlers
 
   return (
     <form name="create" onSubmit={handleSubmit}>
